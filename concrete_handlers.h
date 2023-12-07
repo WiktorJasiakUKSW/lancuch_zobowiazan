@@ -39,3 +39,14 @@ public:
         }
     }
 };
+class CapybaraHandler : public AbstractHandler {
+public:
+    std::string Handle(std::string request) override {
+        if (request == "Grass") {
+            return "Capybara: I'll eat the " + request + ".\n";
+        }
+        else {
+            return AbstractHandler::Handle(request);
+        }
+    }
+};
