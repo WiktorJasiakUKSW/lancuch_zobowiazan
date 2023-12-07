@@ -53,6 +53,7 @@ int main() {
     std::cout << "\n";
     std::cout << "Subchain: Squirrel > Dog\n\n";
     ClientCode(*squirrel);
+	ClientCode(*monkey);
 
     delete monkey;
     delete squirrel;
