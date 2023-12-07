@@ -50,3 +50,14 @@ public:
         }
     }
 };
+class FishHandler : public AbstractHandler {
+public:
+    std::string Handle(std::string request) override {
+        if (request == "Bait") {
+            return "Fish: Bul Bul Bul " + request + ".\n";
+        }
+        else {
+            return AbstractHandler::Handle(request);
+        }
+    }
+};
