@@ -57,6 +57,6 @@ int main() {
     delete monkey;
     delete squirrel;
     delete dog;
-
+	system("pause");
     return 0;
 }
