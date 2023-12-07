@@ -1,8 +1,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 #include "concrete_handlers.h"
+
+void ClientCodeGit(Handler& handler) {
+	std::vector<std::string> food = { "Milk", "Grass", "Cup of coffee" };
+	for (const std::string& f : food) {
+		std::cout << "Client: Who wants a " << f << "?\n";
+		const std::string result = handler.Handle(f);
+		if (!result.empty()) {
+			std::cout << "  " << result;
+		}
+		else {
+			std::cout << "  " << f << " was left untouched.\n";
+		}
+	}
+}
 
 
 /**
